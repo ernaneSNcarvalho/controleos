@@ -44,13 +44,19 @@
                         <h3 class="card-title">Mantenha seus dados atualizados aqui</h3>
                     </div>
                     <div class="card-body">
-                        <div class="form-group">
-                            <label for="">Nome</label>
-                            <input type="text" name="" id="" class="form-control" placeholder="Digite aqui...">
-                        </div>
-                        <div class="form-group">
-                            <label for="">E-mail</label>
-                            <input type="email" name="" id="" class="form-control" placeholder="Digite aqui...">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Nome</label>
+                                    <input type="text" name="" id="" class="form-control" placeholder="Digite aqui...">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">E-mail</label>
+                                    <input type="email" name="" id="" class="form-control" placeholder="Digite aqui...">
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="">Telefone</label>

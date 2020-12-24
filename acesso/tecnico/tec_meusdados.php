@@ -60,7 +60,7 @@
                             <label for="">Endereço</label>
                             <input type="text" name="" id="" class="form-control" placeholder="Digite aqui...">
                         </div>
-                        <button class="btn btn-success">Gravar</button>
+                        <button class="btn btn-success">Finalizar</button>
                     </div>
 
 

@@ -49,7 +49,7 @@
                             <input class="form-control" type="text" name="" id="" placeholder="Digite aqui...">
                         </div>
 
-                        <button class="btn btn-success">Buscar</button>
+                        <button class="btn btn-success">Gravar</button>
                     </div>
                     <hr>
                     <div class="row">

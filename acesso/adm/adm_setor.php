@@ -48,8 +48,9 @@
                         <div class="form-group">
                             <label for="">Nome do Setor</label>
                             <input type="text" class="form-control" placeholder="Digite aqui...">
-                            <button style="margin   : 2px;" class="btn btn-success">Gravar</button>
+
                         </div>
+                        <button class="btn btn-success">Gravar</button>
                         <hr>
                         <div class="row">
                             <div class="col-12">
