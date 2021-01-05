@@ -54,17 +54,23 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">E-mail</label>
-                                    <input type="email" name="" id="" class="form-control" placeholder="Digite aqui...">
+                                    <input type="email" name="" id="" class="form-control" placeholder="nome@dominio.com">
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="">Telefone</label>
-                            <input type="number" name="" id="" class="form-control" placeholder="(XX)XXXXX-XXXX">
-                        </div>
-                        <div class="form-group">
-                            <label for="">Endereço</label>
-                            <input type="text" name="" id="" class="form-control" placeholder="Digite aqui...">
+                            <div class="col-md-6">
+
+                                <div class="form-group">
+                                    <label for="">Telefone</label>
+                                    <input type="text" name="" id="" class="form-control" placeholder="(XX)XXXXX-XXXX">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+
+                                <div class="form-group">
+                                    <label for="">Endereço</label>
+                                    <input type="text" name="" id="" class="form-control" placeholder="Digite aqui...">
+                                </div>
+                            </div>
                         </div>
                         <button class="btn btn-success">Gravar</button>
                     </div>

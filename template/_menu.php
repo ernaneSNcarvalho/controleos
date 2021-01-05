@@ -146,6 +146,12 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item" class="nav-link">
+                    <a href="#" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Sair</p>
+                    </a>
+                </li>
 
 
         </nav>
