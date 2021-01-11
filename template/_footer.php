@@ -21,3 +21,4 @@
 <script src="../../template/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../template/dist/js/demo.js"></script>
+<script src="../../template/plugins/toastr/toastr.min.js"></script>

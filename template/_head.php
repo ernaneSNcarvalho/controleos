@@ -6,6 +6,7 @@
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="../../template/plugins/fontawesome-free/css/all.min.css">
+<link rel="stylesheet" href="../../template/plugins/toastr/toastr.min.css">
 <!-- Ionicons -->
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 <!-- overlayScrollbars -->

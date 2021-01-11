@@ -1,3 +1,18 @@
+<?php
+
+require_once '../../CTRL/SetorCTLR.php';
+require_once '../../VO/SetorVO.php';
+
+if (isset($_POST['btn_salvar'])) {
+    $vo = new SetorVO();
+    $ctrl = new SetorCTRL();
+    $nome = $_POST['nome'];
+    $vo->setNomeSetor($nome);
+    $ret = $ctrl->InserirSetorCtrl($vo);
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -45,12 +60,13 @@
 
                     </div>
                     <div class="card-body">
-                        <div class="form-group">
-                            <label for="">Nome do Setor</label>
-                            <input type="text" class="form-control" placeholder="Digite aqui...">
-
-                        </div>
-                        <button class="btn btn-success">Gravar</button>
+                        <form action="adm_setor.php" method="POST">
+                            <div class="form-group">
+                                <label for="">Nome do Setor</label>
+                                <input name="nome" type="text" class="form-control" placeholder="Digite aqui...">
+                            </div>
+                            <button name="btn_salvar" class="btn btn-success">Gravar</button>
+                        </form>
                         <hr>
                         <div class="row">
                             <div class="col-12">
@@ -106,6 +122,7 @@
         <!-- /.content-wrapper -->
         <?php
         include_once '../../template/_footer.php';
+        include_once '../../template/_msg.php';
         ?>
 
     </div>
