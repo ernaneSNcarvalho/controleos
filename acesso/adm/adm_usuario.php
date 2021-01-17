@@ -48,9 +48,9 @@
                             <label for="">Tipo</label>
                             <select class="form-control" name="" id="">
                                 <option value="" selected>Selecione</option>
-                                <option value="">Administrador</option>
-                                <option value="">Funcionário</option>
-                                <option value="">Técnico</option>
+                                <option value="1">Administrador</option>
+                                <option value="2">Funcionário</option>
+                                <option value="3">Técnico</option>
                             </select>
                         </div>
                         <div class="form-group">

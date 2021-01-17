@@ -1,3 +1,18 @@
+<?php
+
+require_once '../../VO/ModeloVO.php';
+require_once '../../CTRL/ModeloCTRL.php';
+
+if (isset($_POST['btn-gravar'])) {
+    $vo = new ModeloVO();
+    $ctrl = new ModeloCTRL();
+    $nome = $_POST['nomeModelo'];
+    $vo->setNomeModelo($nome);
+    $ret = $ctrl->InserirModeloCtrl($vo);
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -43,14 +58,18 @@
                     <div class="card-header">
                         <h3 class="card-title">Gerencie aqui todos os modelos de equipamentos</h3>
                     </div>
-                    <div class="card-body">
-                        <div class="form-group">
-                            <label for="">Nome modelo</label>
-                            <input class="form-control" type="text" name="" id="" placeholder="Digite aqui...">
-                        </div>
 
-                        <button class="btn btn-success">Gravar</button>
+                    <div class="card-body">
+                        <form action="adm_gerenciarmodelo.php" method="post">
+                            <div class="form-group">
+                                <label for="">Nome modelo</label>
+                                <input class="form-control" type="text" name="nomeModelo" id="" placeholder="Digite aqui...">
+                            </div>
+
+                            <button name="btn-gravar" class="btn btn-success">Gravar</button>
+                        </form>
                     </div>
+
                     <hr>
                     <div class="row">
                         <div class="col-12">
@@ -106,6 +125,7 @@
     <!-- /.content-wrapper -->
     <?php
     include_once '../../template/_footer.php';
+    include_once '../../template/_msg.php';
     ?>
 
     </div>

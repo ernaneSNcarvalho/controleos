@@ -1,3 +1,19 @@
+<?php
+
+require_once '../../CTRL/TipoCTRL.php';
+require_once '../../VO/TipoVO.php';
+
+if (isset($_POST['btn-gravar'])) {
+    $ctrl = new TipoCTRL();
+    $vo = new TipoVO();
+    $nome = $_POST['nomeTipo'];
+    $vo->setNomeTipo($nome);
+    $ret = $ctrl->InserirTipoCtrl($vo);
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -44,12 +60,14 @@
                         <h3 class="card-title">Gerencie aqui todos os tipos de equipamento</h3>
                     </div>
                     <div class="card-body">
-                        <div class="form-group">
-                            <label for="">Nome tipo</label>
-                            <input class="form-control" type="text" name="" id="" placeholder="Digite aqui...">
-                        </div>
+                        <form action="adm_tipoequip.php" method="POST">
+                            <div class="form-group">
+                                <label for="">Nome tipo</label>
+                                <input class="form-control" type="text" name="nomeTipo" id="" placeholder="Digite aqui...">
+                            </div>
 
-                        <button class="btn btn-success">Gravar</button>
+                            <button name="btn-gravar" class="btn btn-success">Gravar</button>
+                        </form>
                     </div>
                     <hr>
                     <div class="row">

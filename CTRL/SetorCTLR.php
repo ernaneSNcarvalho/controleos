@@ -9,5 +9,7 @@ class SetorCTRL
         if ($vo->getNomeSetor() == '') {
             return 0;
         }
+
+        //continua o processo...
     }
 }

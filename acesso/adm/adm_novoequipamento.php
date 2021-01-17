@@ -1,3 +1,19 @@
+<?php
+
+require_once '../../CTRL/EquipamentoCTRL.php';
+require_once '../../VO/EquipamentoVO.php';
+
+if (isset($_POST['btn_salvar'])) {
+    $vo = new EquipamentoVO();
+    $ctrl = new EquipamentoCTRL();
+    $tipo = $_POST['tipo'];
+    $modelo = $_POST['modelo'];
+    $identificacao = $_POST['identificacao'];
+    $descricao = $_POST['descricao'];
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -44,47 +60,52 @@
                         <h3 class="card-title">Cadastre seu novo equipamento aqui</h3>
 
                     </div>
-                    <div class="card-body">
-                        <div class="form-group">
-                            <label for="">Tipo</label>
-                            <select class="form-control" name="" id="">
-                                <option value="">Selecione</option>
-                            </select>
+                    <form action="adm_novoequipamento.php" method="POST">
+                        <div class="card-body">
+                            <form action="adm_novoequipamento.php" method="POST">
+                                <div class="form-group">
+                                    <label for="">Tipo</label>
+                                    <select class="form-control" name="tipo" id="">
+                                        <option value="">Selecione</option>
+                                    </select>
 
-                        </div>
-                        <div class="form-group">
-                            <label for="">Modelo</label>
-                            <select class="form-control" name="" id="">
-                                <option value="">Selecione</option>
-                            </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Modelo</label>
+                                    <select class="form-control" name="modelo" id="modelo">
+                                        <option value="">Selecione</option>
 
-                        </div>
-                        <div class="form-group">
-                            <label for="">Identificação</label>
-                            <input type="text" name="" id="" class="form-control" placeholder="Digite aqui...">
+                                    </select>
 
-                        </div>
-                        <div class="form-group">
-                            <label for="">Descrição</label>
-                            <textarea class="form-control" placeholder="Digite aqui..."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Identificação</label>
+                                    <input type="text" name="identificacao" id="" class="form-control" placeholder="Digite aqui...">
 
-                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Descrição</label>
+                                    <textarea name="descricao" class="form-control" placeholder="Digite aqui..."></textarea>
 
-                        <button class="btn btn-success">Gravar</button>
+                                </div>
 
-                    </div>
-                    <!-- /.card-body -->
-
+                                <button name="btn-gravar" class="btn btn-success">Gravar</button>
+                            </form>
+                    </form>
                 </div>
-                <!-- /.card -->
+                <!-- /.card-body -->
 
-            </section>
-            <!-- /.content -->
         </div>
-        <!-- /.content-wrapper -->
-        <?php
-        include_once '../../template/_footer.php';
-        ?>
+        <!-- /.card -->
+
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <?php
+    include_once '../../template/_footer.php';
+    include_once '../../template/_msg.php';
+    ?>
 
     </div>
     <!-- ./wrapper -->
