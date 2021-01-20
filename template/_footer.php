@@ -22,3 +22,5 @@
 <!-- AdminLTE for demo purposes -->
 <script src="../../template/dist/js/demo.js"></script>
 <script src="../../template/plugins/toastr/toastr.min.js"></script>
+<script src="js/mensagens_ambiente.js"></script>
+<script src="js/validacao.js"></script>
