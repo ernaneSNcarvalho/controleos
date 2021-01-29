@@ -4,7 +4,7 @@ if (isset($ret)) {
 
         case -1:
             echo "<script>
-                toastr.error('Ocorreu um erro na operação. Tente mais tarde!');
+                toastr.error(RetornarMsg(0));
             </script>";
             break;
 

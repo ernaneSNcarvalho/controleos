@@ -63,9 +63,9 @@ if (isset($_POST['btn_salvar'])) {
                         <form action="adm_setor.php" method="POST">
                             <div class="form-group">
                                 <label for="">Nome do Setor</label>
-                                <input name="nome" type="text" class="form-control" placeholder="Digite aqui...">
+                                <input id="name" name="nome" type="text" class="form-control" placeholder="Digite aqui...">
                             </div>
-                            <button name="btn_salvar" class="btn btn-success">Gravar</button>
+                            <button onclick="return ValidarTela(1)" name="btn_salvar" class="btn btn-success">Gravar</button>
                         </form>
                         <hr>
                         <div class="row">
@@ -127,7 +127,6 @@ if (isset($_POST['btn_salvar'])) {
 
     </div>
     <!-- ./wrapper -->
-
 
 </body>
 
