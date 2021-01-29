@@ -7,7 +7,13 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/ControleOs/VO/UsuarioVO.php";
 if (isset($_POST['btn-gravar'])) {
     $ctrl = new UsuarioCTRL();
     $tipo = $_POST['tipo'];
+<<<<<<< HEAD
     switch ($tipo) {
+=======
+
+    switch ($tipo) {
+
+>>>>>>> 723c827e20876d51f2c28bb6933d87735b7b00ed
         case '1':
             $vo = new UsuarioVO();
             $vo->setTipo($tipo);
@@ -143,6 +149,7 @@ if (isset($_POST['btn-gravar'])) {
     <!-- /.content-wrapper -->
     <?php
     include_once '../../template/_footer.php';
+    include_once '../../template/_msg.php';
     ?>
 
     </div>

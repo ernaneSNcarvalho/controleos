@@ -22,5 +22,10 @@
 <!-- AdminLTE for demo purposes -->
 <script src="../../template/dist/js/demo.js"></script>
 <script src="../../template/plugins/toastr/toastr.min.js"></script>
+<<<<<<< HEAD
 <script src="../../template/js/mensagens_ambiente.js"></script>
 <script src="../../template/js/validacao.js"></script>
+=======
+<script src="js/mensagens_ambiente.js"></script>
+<script src="js/validacao.js"></script>
+>>>>>>> 723c827e20876d51f2c28bb6933d87735b7b00ed
