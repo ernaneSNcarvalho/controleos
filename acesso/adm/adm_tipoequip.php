@@ -124,6 +124,7 @@ if (isset($_POST['btn-gravar'])) {
     <!-- /.content-wrapper -->
     <?php
     include_once '../../template/_footer.php';
+    include_once '../../template/_msg.php';
     ?>
 
     </div>

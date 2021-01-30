@@ -1,19 +1,16 @@
 <?php
-require_once $_SERVER["DOCUMENT_ROOT"] . "/ControleOs/CTRL/UsuarioCTRL.php";
-require_once $_SERVER["DOCUMENT_ROOT"] . "/ControleOs/VO/TecnicoVO.php";
-require_once $_SERVER["DOCUMENT_ROOT"] . "/ControleOs/VO/UsuarioVO.php";
-require_once $_SERVER["DOCUMENT_ROOT"] . "/ControleOs/VO/UsuarioVO.php";
+
+require_once '../../CTRL/UsuarioCTRL.php';
+require_once '../../VO/UsuarioVO.php';
+require_once '../../VO/TecnicoVO.php';
+require_once '../../VO/FuncionarioVO.php';
 
 if (isset($_POST['btn-gravar'])) {
     $ctrl = new UsuarioCTRL();
     $tipo = $_POST['tipo'];
-<<<<<<< HEAD
-    switch ($tipo) {
-=======
 
     switch ($tipo) {
 
->>>>>>> 723c827e20876d51f2c28bb6933d87735b7b00ed
         case '1':
             $vo = new UsuarioVO();
             $vo->setTipo($tipo);
@@ -27,11 +24,11 @@ if (isset($_POST['btn-gravar'])) {
             $vo->setTipo($tipo);
             $vo->setNome($_POST['nome']);
             $vo->setCpf($_POST['cpf']);
-            $vo->setEnderecoFun($_POST['end']);
-            $vo->setTelFun($_POST['tel']);
+            $vo->setEnderecoFun($_POST['endereco']);
+            $vo->setTelFun($_POST['telefone']);
             $vo->setEmailFun($_POST['email']);
             $vo->setIdSetor($_POST['setor']);
-            $ret = $ctrl->InserirUserAdm($vo);
+            $ret = $ctrl->InserirUserFunc($vo);
             break;
 
         case '3':
@@ -39,14 +36,14 @@ if (isset($_POST['btn-gravar'])) {
             $vo->setTipo($tipo);
             $vo->setNome($_POST['nome']);
             $vo->setCpf($_POST['cpf']);
-            $vo->setEnderecoTec($_POST['end']);
-            $vo->setTelTec($_POST['tel']);
+            $vo->setEnderecoTec($_POST['endereco']);
+            $vo->setTelTec($_POST['telefone']);
             $vo->setEmailTec($_POST['email']);
-
-            $ret = $ctrl->InserirUserAdm($vo);
+            $ret = $ctrl->InserirUserTec($vo);
             break;
     }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -125,11 +122,11 @@ if (isset($_POST['btn-gravar'])) {
                             </div>
                             <div class="form-group">
                                 <label for="">Telefone</label>
-                                <input type="text" name="tel" id="tel" class="form-control" placeholder="(XX)XXXXX-XXXX">
+                                <input type="number" name="telefone" id="telefone" class="form-control" placeholder="(XX)XXXXX-XXXX">
                             </div>
                             <div class="form-group">
                                 <label for="">Endereço</label>
-                                <input type="text" name="end" id="end" class="form-control" placeholder="Digite aqui...">
+                                <input type="text" name="endereco" id="endereco" class="form-control" placeholder="Digite aqui...">
                             </div>
                             <button name="btn-gravar" class="btn btn-success">Gravar</button>
                         </form>

@@ -4,23 +4,19 @@ if (isset($ret)) {
 
         case -1:
             echo "<script>
-<<<<<<< HEAD
-                toastr.error(RetornarMsg(0));
-=======
-                toastr.error(RetornaMsg(-1));
->>>>>>> 723c827e20876d51f2c28bb6933d87735b7b00ed
+                toastr.error('Ocorreu um erro na operação. Tente mais tarde!');
             </script>";
             break;
 
         case 0:
             echo "<script>
-                toastr.warning(RetornaMsg(0));
+                toastr.warning('Preencher o(s) campo(s) obrigatório(s)');
             </script>";
             break;
 
         case 1:
             echo "<script>
-                toastr.success(RetornaMsg(1));
+                toastr.success('Ação realizada com sucesso');
             </script>";
             break;
     }
